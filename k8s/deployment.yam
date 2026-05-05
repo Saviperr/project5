@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project5
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: project5
+  template:
+    metadata:
+      labels:
+        app: project5
+    spec:
+      containers:
+      - name: project5
+        image: saviperr/project5:latest
+        ports:
+        - containerPort: 5000 
